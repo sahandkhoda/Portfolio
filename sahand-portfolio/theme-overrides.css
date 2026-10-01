@@ -1,3 +1,5 @@
 .nav .nav-home{color:#e1e5e6}.nav .nav-home:after{display:none}.nav a[aria-current=location]{color:#dec08c}.nav a[aria-current=location]:after{content:"";display:block;height:1px;background:#c7a572;margin-top:9px}.footer-mark .brand-name{font-size:12px}.footer-mark .brand-subtitle{font-size:6px}
 @media(max-width:650px){.nav a[aria-current=location]:after{display:none}}
 .quote .quote-mark.quote-end{position:static;display:inline-block;line-height:0;vertical-align:-.23em;padding-left:6px}
+.about h2 .about-medicine{color:#c16f8e;font-style:italic}
+.about h2 .about-technology{color:#648cb2;font-style:italic}
