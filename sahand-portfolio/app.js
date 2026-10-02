@@ -1,13 +1,32 @@
 const content = window.portfolioContent;
 const expertiseList = document.querySelector('#expertise-list');
 const expertiseIcons = [
-  '<circle cx="10" cy="17" r="3"/><circle cx="26" cy="8" r="3"/><circle cx="39" cy="19" r="3"/><circle cx="21" cy="35" r="3"/><circle cx="39" cy="37" r="3"/><path d="m13 16 10-6m6 0 8 7M12 19l7 13m5 3 12 1m-9-22-4 11m8-2 6 5"/>',
+  /* DATA SCIENCE & AI — neural network */
+  '<circle cx="10" cy="12" r="3"/><circle cx="24" cy="7" r="3"/><circle cx="38" cy="14" r="3"/><circle cx="15" cy="29" r="3"/><circle cx="31" cy="34" r="3"/><path d="m13 11 8-3m6 1 8 3M12 14l2 12m4 3 10 4m5-19-2 16M18 28l4-18"/>',
+
+  /* SIGNAL PROCESSING — waveform */
   '<path d="M5 24h8l4-12 7 25 6-20 4 7h9M5 42h38"/>',
+
+  /* MEDICAL IMAGING — scanner */
   '<path d="M8 8h8m16 0h8M8 40h8m16 0h8M8 8v8m0 16v8m32-32v8m0 16v8"/><circle cx="24" cy="24" r="11"/><circle cx="24" cy="24" r="5"/><path d="M24 18v12m-6-6h12"/>',
+
+  /* HEALTHCARE DATA SYSTEMS — database */
   '<ellipse cx="24" cy="10" rx="15" ry="6"/><path d="M9 10v24c0 3 7 6 15 6s15-3 15-6V10M9 22c0 3 7 6 15 6s15-3 15-6"/>',
-  '<rect x="7" y="9" width="34" height="30" rx="1"/><path d="M7 16h34m-23 8-5 4 5 4m8-8 5 4-5 4m-2-10-3 12"/>'
-].map((paths) => `<svg class="expertise-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${paths}</svg>`);
-expertiseList.innerHTML = content.expertise.map(([title, text], i) => `<article class="expertise-card"><span class="item-number">0${i+1} <i>/ 05</i></span>${expertiseIcons[i]}<h3>${title}</h3><p>${text}</p></article>`).join('');
+
+  /* SOFTWARE & ENGINEERING — code */
+  '<rect x="7" y="9" width="34" height="30" rx="1"/><path d="M7 16h34m-23 8-5 4 5 4m8-8 5 4-5 4m-2-10-3 12"/>',
+
+  /* BIOMEDICAL SYSTEMS — human + medical cross */
+  '<circle cx="24" cy="10" r="5"/><path d="M14 42c0-8 4-14 10-14s10 6 10 14M24 15v10m-7 1 7 5 7-5M39 12v12m-6-6h12"/>'
+].map(
+  (paths) =>
+    `<svg class="expertise-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${paths}</svg>`
+);
+
+expertiseList.innerHTML = content.expertise.map(
+  ([title, text], i) =>
+    `<article class="expertise-card">${expertiseIcons[i]}<h3>${title}</h3><p>${text}</p></article>`
+).join('');
 
 document.querySelector('#project-list').innerHTML = content.projects.map((project, i) => `<article class="project-card project-${i+1}"><div class="project-visual"><img src="${project.image}" alt="${project.alt}" loading="lazy" /><span class="visual-label">${project.number} — ${project.category}</span></div><div class="project-copy"><p class="project-meta">PROJECT&nbsp; ${project.number} <i>${project.category}</i></p><h3>${project.title}</h3><p class="project-lead">${project.lead}</p><div class="project-details" id="project-detail-${i}"><p>${project.description}</p><div class="tag-list">${project.tags.map(tag=>`<span>${tag}</span>`).join('')}</div></div><button class="project-toggle" aria-expanded="false" aria-controls="project-detail-${i}">EXPLORE PROJECT <span>↗</span></button></div></article>`).join('');
 

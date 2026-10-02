@@ -5,8 +5,9 @@ window.portfolioContent = {
     ["SIGNAL PROCESSING", "ECG, biosignals, signal analysis, feature extraction and physiological data."],
     ["MEDICAL IMAGING", "Ultrasound, image analysis, medical visualization and imaging systems."],
     ["HEALTHCARE DATA SYSTEMS", "FHIR, databases, clinical data integration and healthcare interoperability."],
-    ["SOFTWARE & ENGINEERING", "Programming and software development spanning multiple languages and platforms."]
-  ],
+    ["SOFTWARE & ENGINEERING", "Programming and software development spanning multiple languages and platforms."],
+    ["BIOMEDICAL SYSTEMS", "Medical sensors, instrumentation, electronics and technology for healthcare applications."]
+],
   projects: [
     {number:"01", category:"CAD / INSTRUMENTATION", title:"Electron Beam Measurement System", image:"assets/electron-beam.svg", alt:"Illustrative electron beam measurement system diagram", lead:"A high-precision measurement system for transmission electron microscopy.", description:"Designed and manufactured a measurement system for TEM, integrating a stepper motor, Faraday cup and drive shaft. Work included assessing material properties, thermal behaviour, vacuum compatibility and measurement uncertainty; identifying technical risks through interaction and performance analysis; and documenting design, development and validation in a technical report. The system was modelled in Solid Edge and rendered in KeyShot.", tags:["TEM","Solid Edge","CAD","Instrumentation","Thermal Analysis","Measurement Uncertainty"]},
     {number:"02", category:"MOTION ANALYSIS / SOFTWARE", title:"MoveSync — Motion Analysis Platform", image:"assets/movesync.svg", alt:"Illustrative MoveSync motion analysis interface", lead:"A cost-effective motion analysis platform for human movement.", description:"Developing MoveSync at KTH to quantify and analyse human movement using sensor data. The work includes building front-end components and interactive data visualisation, implementing signal-processing workflows and filtering algorithms, and evaluating feasibility and performance through iterative development and optimisation.", tags:["Motion Analysis","Signal Processing","Data Visualisation","JavaScript"]},
